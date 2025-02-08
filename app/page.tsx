@@ -17,7 +17,7 @@ import service6 from "../public/service6.jpg"
 import banner from "../public/banner.jpg"
 import aboutus from "../public/aboutus.jpeg"
 
-const sections = ["Home", "Services", "About", "Contact"]
+const sections = ["Startseite", "Unsere Leistungen", "Uber uns", "Kontakt"]
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -113,14 +113,14 @@ export default function CleaningServices() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white rounded-full shadow-md">
+      <nav className="fixed w-[90%] flex justify-center items-center top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white rounded-full shadow-md">
         <ul className="flex p-1">
           {sections.map((section) => (
             <li key={section}>
               <a
                 href={`#${section.toLowerCase()}`}
-                className={`px-2 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors ${
-                  activeSection === section ? "bg-primary text-primary-foreground" : "text-gray-600 hover:text-primary"
+                className={`px-2 sm:px-4 py-2 rounded-full line-clamp-2 text-center text-xs sm:text-sm font-medium transition-colors ${
+                  activeSection === section ? "text-black" : "text-gray-600 hover:text-primary"
                 }`}
               >
                 {section}
@@ -131,7 +131,7 @@ export default function CleaningServices() {
       </nav>
 
       <section
-        id="home"
+        id="startseite"
         ref={(el: any) => (sectionRefs.current[0] = el)}
         className="h-screen flex items-center justify-center relative overflow-hidden"
       >
@@ -154,12 +154,12 @@ export default function CleaningServices() {
       </section>
 
       <section
-        id="services"
+        id="unsere%20leistungen"
         ref={(el: any) => (sectionRefs.current[1] = el)}
         className="min-h-screen flex items-center justify-center bg-white py-16"
       >
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Services</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Unsere Leistungen</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -190,7 +190,7 @@ export default function CleaningServices() {
       </section>
 
       <section
-        id="about"
+        id="uber%20uns"
         ref={(el: any) => (sectionRefs.current[2] = el)}
         className="min-h-screen flex items-center justify-center relative overflow-hidden"
       >
@@ -222,7 +222,7 @@ export default function CleaningServices() {
       </section>
 
       <section
-        id="contact"
+        id="kontakt"
         ref={(el: any) => (sectionRefs.current[3] = el)}
         className="min-h-screen relative flex items-center justify-center bg-white py-16"
         >
