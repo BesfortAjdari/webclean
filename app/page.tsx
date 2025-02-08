@@ -113,7 +113,7 @@ export default function CleaningServices() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <nav className="fixed w-[90%] flex justify-center items-center top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white rounded-full shadow-md">
+      <nav className="fixed w-[90%] md:w-[40%] flex justify-center items-center top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white rounded-full shadow-md">
         <ul className="flex p-1">
           {sections.map((section) => (
             <li key={section}>
